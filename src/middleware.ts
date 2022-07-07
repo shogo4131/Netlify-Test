@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Buffer } from "buffer";
 
 export function middleware(req: NextRequest) {
-  if (!process.env.NEXT_STAGING_ENV) return NextResponse.next();
+  if (process.env.NEXT_STAGING_ENV !== "staging") return NextResponse.next();
 
   const basicAuth = req.headers.get("authorization");
 
