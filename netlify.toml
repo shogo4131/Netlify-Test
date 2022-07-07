@@ -1,6 +1,6 @@
 [context.branch-deploy.environment]
   NEXT_STAGING_ENV = "stg"
-  NEXT_USE_NETLIFY_EDGE=true
+  NEXT_USE_NETLIFY_EDGE = "true"
 
 [build]
   command = 'yarn build'
