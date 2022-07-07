@@ -1,0 +1,10 @@
+[context.branch-deploy.environment]
+  NEXT_STAGING_ENV = 'staging'
+
+[build]
+  command = 'yarn build'
+  publish = '.next'
+  functions = 'out_functions'
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
